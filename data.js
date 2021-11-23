@@ -127,19 +127,41 @@ if(menu.options[menuIndex].text == "All"){
 		</div>
 		`
 	});
-	document.querySelector("main").innerHTML = codeHTML;
 }
-
-
-
-// ECCO PERCHE' CON FILTER DIVENTA PIU' COMPLICATO
-// if(menu.options[menuIndex].text == "Animal"){
-// 	const animal = icons.filter((element) => {
-// 		if(element.type == "animal"){
-// 			return true;
-// 		}
-// 		return false;
-// 	});
-// 	console.log(animal); //Stampa l'array di oggetti
-// 	console.log(!animal); //Stampa false
-// }
+if(menu.options[menuIndex].text == "Animal"){
+	for(let i = 0; i < icons.length; i++){
+		if(icons[i].type == "animal"){
+			codeHTML += `
+			<div class="icon icon-show">
+				<i class="${icons[i].family} ${icons[i].prefix}${icons[i].name} ${icons[i].type}"></i>
+				<span class="icon-name">${icons[i].name}</span>
+			</div>
+			`
+		}
+	}
+}
+if(menu.options[menuIndex].text == "Vegetable"){
+	for(let i = 0; i < icons.length; i++){
+		if(icons[i].type == "vegetable"){
+			codeHTML += `
+			<div class="icon icon-show">
+				<i class="${icons[i].family} ${icons[i].prefix}${icons[i].name} ${icons[i].type}"></i>
+				<span class="icon-name">${icons[i].name}</span>
+			</div>
+			`
+		}
+	}
+}
+if(menu.options[menuIndex].text == "User"){
+	for(let i = 0; i < icons.length; i++){
+		if(icons[i].type == "user"){
+			codeHTML += `
+			<div class="icon icon-show">
+				<i class="${icons[i].family} ${icons[i].prefix}${icons[i].name} ${icons[i].type}"></i>
+				<span class="icon-name">${icons[i].name}</span>
+			</div>
+			`
+		}
+	}
+}
+document.querySelector("main").innerHTML = codeHTML;
