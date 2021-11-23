@@ -43,7 +43,7 @@ main {
 }
     .icon {
         height: 100px;
-        width: calc(100% / 5 - 50px);
+        width: calc(100% / 5 - 40px);
         background-color: white;
         border-radius: 20px;
         -webkit-box-shadow: 5px 5px 10px -3px #000000; 

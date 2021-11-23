@@ -1,4 +1,4 @@
-[
+const icons = [
 	{
 		name: 'cat',
 		prefix: 'fa-',
@@ -112,3 +112,16 @@
 		color: 'blue'
 	}
 ];
+console.log(icons);
+
+// Stampa codice HTML intero senza filtri
+let codeHTML = "";
+icons.forEach((element) => {
+	codeHTML += `
+	<div class="icon icon-show">
+        <i class="${element.family} ${element.prefix}${element.name} ${element.type}"></i>
+        <span class="icon-name">${element.name}</span>
+    </div>
+	`
+});
+document.querySelector("main").innerHTML = codeHTML;
