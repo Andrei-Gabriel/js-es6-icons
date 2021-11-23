@@ -114,7 +114,6 @@ const icons = [
 ];
 console.log(icons);
 
-// Stampa codice HTML intero senza filtri
 let codeHTML = "";
 let menu = document.getElementById('tipi_icone');
 let menuIndex = menu.selectedIndex;
@@ -128,7 +127,14 @@ if(menu.options[menuIndex].text == "All"){
 		</div>
 		`
 	});
+	document.querySelector("main").innerHTML = codeHTML;
 }
-if(menu.options[menuIndex].text == "Animal"){
-
-}
+// if(menu.options[menuIndex].text == "Animal"){
+// 	const animal = icons.filter((element) => {
+// 		if(element.type == "animal"){
+// 			return true;
+// 		}
+// 		return false;
+// 	});
+// 	console.log(animal);
+// }
