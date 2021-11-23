@@ -116,12 +116,19 @@ console.log(icons);
 
 // Stampa codice HTML intero senza filtri
 let codeHTML = "";
-icons.forEach((element) => {
-	codeHTML += `
-	<div class="icon icon-show">
-        <i class="${element.family} ${element.prefix}${element.name} ${element.type}"></i>
-        <span class="icon-name">${element.name}</span>
-    </div>
-	`
-});
-document.querySelector("main").innerHTML = codeHTML;
+let menu = document.getElementById('tipi_icone');
+let menuIndex = menu.selectedIndex;
+
+if(menu.options[menuIndex].text == "All"){
+	icons.forEach((element) => {
+		codeHTML += `
+		<div class="icon icon-show">
+			<i class="${element.family} ${element.prefix}${element.name} ${element.type}"></i>
+			<span class="icon-name">${element.name}</span>
+		</div>
+		`
+	});
+}
+if(menu.options[menuIndex].text == "Animal"){
+
+}
