@@ -129,6 +129,10 @@ if(menu.options[menuIndex].text == "All"){
 	});
 	document.querySelector("main").innerHTML = codeHTML;
 }
+
+
+
+// ECCO PERCHE' CON FILTER DIVENTA PIU' COMPLICATO
 // if(menu.options[menuIndex].text == "Animal"){
 // 	const animal = icons.filter((element) => {
 // 		if(element.type == "animal"){
@@ -136,5 +140,6 @@ if(menu.options[menuIndex].text == "All"){
 // 		}
 // 		return false;
 // 	});
-// 	console.log(animal);
+// 	console.log(animal); //Stampa l'array di oggetti
+// 	console.log(!animal); //Stampa false
 // }
